@@ -1,4 +1,3 @@
-import "./card.css";
 function Card() {
   return (
     <div style={style.container} >
@@ -24,11 +23,11 @@ const style ={
       },
       title: {
         fontSize: '1.4rem',
-        margin: '3% 1%'
+        margin: '3% 4%'
       },
       content: {
         fontSize: '1.1rem',
         marginLeft: '6%',
-        marginTop: '1%'
+        marginTop: '-2%'
       },
     }
