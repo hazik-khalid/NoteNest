@@ -6,7 +6,6 @@ function Navbar() {
     </div>
   )
 }
-
 export default Navbar
 
 const styles = {
@@ -18,6 +17,6 @@ const styles = {
     color: "#ffff",
     fontSize: "1.2rem",
     marginLeft: "5%"
-  }
+  },
 };
 
