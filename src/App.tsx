@@ -21,12 +21,15 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import Home from './pages/Home'
+import { NoteProvider } from './components/NoteContext';
 
 setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
+    <NoteProvider>
     <Home />
+    </NoteProvider>
   </IonApp>
 );
 
