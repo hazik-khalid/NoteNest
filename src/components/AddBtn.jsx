@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 
+export let data = [];
 const AddScreen = ({ onClose }) => {
   const [input1, setInput1] = useState('');
   const [input2, setInput2] = useState('');
-
   const handleSubmit = () => {
-    // Handle form submission here
-    console.log(input1, input2);
-    onClose();
+    const newCard = {
+      title: input1,
+      text: input2
+    };
+    data = [...data, newCard];
+    console.log(data);
+    onClose()
   };
 
   return (
@@ -24,10 +28,10 @@ const AddScreen = ({ onClose }) => {
         <textarea 
           rows="15" 
           cols="32" 
-          placeholder="Input 2" 
+          placeholder="Enter the text" 
           value={input2} 
           onChange={(e) => setInput2(e.target.value)} 
-          style={{ ...style.textarea, width: 'calc(100% - 10px)', }}
+          style={{ ...style.textarea, width: 'calc(100% - 5px)', }}
         ></textarea>
         <button onClick={handleSubmit} style={style.button}>Add</button>
       </div>
@@ -79,7 +83,7 @@ const style = {
   },
   card: {
     backgroundColor: "#bbdedf",
-    border:"2px solid black",
+    border:"1px solid grey",
     padding: "20px",
     borderRadius: "8px",
     width: "600px",
@@ -112,3 +116,4 @@ const style = {
     cursor: "pointer",
   },
 };
+
