@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 
-export let data = [];
+export const [data, setdata] = useState([{title:"haziik",text:"huedhiqewfhewj"}])
+
 const AddScreen = ({ onClose }) => {
   const [input1, setInput1] = useState('');
   const [input2, setInput2] = useState('');
+
   const handleSubmit = () => {
     const newCard = {
       title: input1,
       text: input2
     };
-    data = [...data, newCard];
+    setdata(...data,newCard)
     console.log(data);
-    onClose()
+    onClose() 
   };
 
   return (
